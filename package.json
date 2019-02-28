@@ -26,7 +26,10 @@
     "dev": "run-p dev:bundle dev:app:delayed",
     "dev:app": "NODE_ENV=development run-electron -r ./electron/development .",
     "dev:app:delayed": "sleep 2 && run-s dev:app",
-    "dev:bundle": "NODE_ENV=development parcel watch ./src/index.dev.njk --hmr-hostname localhost --public-url=./"
+    "dev:bundle": "NODE_ENV=development parcel watch ./src/index.dev.njk --hmr-hostname localhost --public-url=./",
+    "postbuild:linux": "./scripts/fix-update-metadata.sh",
+    "postbuild:mac": "./scripts/fix-update-metadata.sh",
+    "postbuild:win": "./scripts/fix-update-metadata.sh"
   },
   "lint-staged": {
     "ignore": [

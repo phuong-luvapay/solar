@@ -14,3 +14,12 @@ publish:
   - provider: github
     owner: satoshipay
     repo: solar
+
+mac:
+  artifactName: Solar.Wallet.${version}.${ext}
+
+linux:
+  artifactName: Solar.Wallet.${version}.${ext}
+
+win:
+  artifactName: Solar.Wallet.Setup.${version}.${ext}
